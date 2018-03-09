@@ -20,7 +20,7 @@ const initialState = [
 ];
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case "ADD_ITEM":
+    case "ADD_ITEM": {
       const position = action.payload.value;
       const selectedItem = state[position];
       const before = state.slice(0, position);
@@ -34,8 +34,22 @@ const reducer = (state = initialState, action) => {
         newProduct,
         ...after
       ];
-    case "REMOVE_ITEM":
-      return state;
+    }
+    case "REMOVE_ITEM": {
+      const position = action.payload.value;
+      const selectedItem = state[position];
+      const before = state.slice(0, position);
+      const after = state.slice(position + 1);
+      const newProduct = {
+          ...selectedItem,
+          count: selectedItem.count === 0 ? 0 : selectedItem.count - 1
+      }
+      return [
+          ...before,
+          newProduct,
+          ...after
+      ]
+    }
     default:
       return state;
   }
