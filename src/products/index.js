@@ -13,7 +13,7 @@ const initialState = [
         count: 0
     },
     {
-        imgScr: 'https://via.placeholder.com/100x100',
+        imgSrc: 'https://via.placeholder.com/100x100',
         name: 'Rug',
         price: 93.47,
         count: 0
