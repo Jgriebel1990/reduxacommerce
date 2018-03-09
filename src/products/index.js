@@ -7,15 +7,15 @@ const initialState = [
         count: 0
     },
     {
-        imgScr: 'https://via.placeholder.com/100x100',
-        name: 'Rug',
-        price: 93.47,
-        count: 0
-    },
-    {
         imgSrc: 'https://via.placeholder.com/100x100',
         name: 'Snail',
         price: 3.99,
+        count: 0
+    },
+    {
+        imgScr: 'https://via.placeholder.com/100x100',
+        name: 'Rug',
+        price: 93.47,
         count: 0
     },
     
