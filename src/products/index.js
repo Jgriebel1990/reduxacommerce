@@ -1,4 +1,6 @@
-import * as types from './types'
+import * as types from './types';
+import * as productActions from './actions';
+
 const initialState = [
   {
     imgSrc: "https://via.placeholder.com/100x100",
@@ -55,5 +57,9 @@ const reducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export {
+    productActions
+}
 
 export default reducer;
