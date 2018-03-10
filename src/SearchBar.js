@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { searchActions } from './search';
 
 const SearchBar = props => {
     return(
@@ -19,7 +20,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        updateSearch: term => dispatch({type: 'UPDATE_SEARCH', payload: {value: term}})
+        updateSearch: term => dispatch(searchActions.updateSearch(term))
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);
