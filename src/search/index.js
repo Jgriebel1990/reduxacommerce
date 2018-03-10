@@ -1,7 +1,14 @@
 
 const initialState = '';
 const reducer = (state=initialState, action) => {
-    console.log('search stuffs');
+    switch(action.type){
+        case 'UPDATE_SEARCH': {
+            const term = action.payload.value;
+            return term;
+        }
+        default:
+            return state;
+    }
     return state;
 }
 
