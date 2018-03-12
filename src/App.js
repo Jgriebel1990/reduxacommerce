@@ -1,25 +1,28 @@
-import React, { Component } from 'react';
-import './App.css';
-import { connect } from 'react-redux';
-import ProductList from './ProductList';
+import React, { Component } from "react";
+import "./App.css";
+import { connect } from "react-redux";
+import ProductList from "./ProductList";
+import SearchBar from './SearchBar';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <ProductList products={this.props.products}/>
+        <SearchBar />
+        <ProductList searchTerm={this.props.search}
+                     products={this.props.products} />
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return state;
-}
+};
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
     dispatch: dispatch
-  }
-}
+  };
+};
 export default connect(mapStateToProps, mapDispatchToProps)(App);
