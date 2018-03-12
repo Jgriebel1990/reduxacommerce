@@ -1,15 +1,15 @@
 import * as types from './types';
 
 
-export const addItem = (position) => ({
+export const addItem = (id) => ({
     type: types.ADD_ITEM,
     payload: {
-        value: position
+        value: id
     }
 });
-export const removeItem = (position) => ({
+export const removeItem = (id) => ({
     type: types.REMOVE_ITEM,
     payload: {
-        value: position
+        value: id
     }
 });
