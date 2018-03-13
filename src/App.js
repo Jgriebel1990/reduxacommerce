@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import ProductList from "./ProductList";
 import SearchBar from './SearchBar';
 import CartButton from './CartButton';
+import CartList from './CartList'
 
 
 class App extends Component {
@@ -15,9 +16,8 @@ class App extends Component {
         <SearchBar />
         <ProductList searchTerm={this.props.search}
                      products={this.props.products} />
-        <div style={cartListStyles}>
-          <button>cart</button>
-        </div>
+        <CartList style={cartListStyles}/>
+        
       </div>
     );
   }

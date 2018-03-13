@@ -2,9 +2,13 @@ import React from 'react';
 
 
 const CartList = props => {
+
     return (
-        <div>
-            
+        <div style={props.style}>
+            <div>
+                
+            </div>
+          cart
         </div>
     );
 }
