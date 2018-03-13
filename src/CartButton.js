@@ -10,7 +10,7 @@ const CartButton = props => {
     return (
         <div>
             <p>{count}</p>
-            <button onClick={() => props.toggle()}>
+            <button onClick={() => props.toggle() }>
                 cart
             </button>
         </div>

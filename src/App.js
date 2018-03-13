@@ -4,17 +4,20 @@ import { connect } from "react-redux";
 import ProductList from "./ProductList";
 import SearchBar from './SearchBar';
 import CartButton from './CartButton';
-import CartList from './CartList';
+
 
 class App extends Component {
   render() {
+    const cartListStyles = {display: this.props.cart === false ? 'none' : 'block'};
     return (
       <div>
         <CartButton />
         <SearchBar />
         <ProductList searchTerm={this.props.search}
                      products={this.props.products} />
-        <CartList />
+        <div style={cartListStyles}>
+          <button>cart</button>
+        </div>
       </div>
     );
   }

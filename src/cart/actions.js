@@ -1,5 +1,5 @@
 import * as types from './types';
 
-export const toggleCart = () => {
+export const toggleCart = () => ({
     type: types.TOGGLE_CART
-}
+});
