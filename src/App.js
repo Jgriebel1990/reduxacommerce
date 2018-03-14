@@ -16,7 +16,8 @@ class App extends Component {
         <SearchBar />
         <ProductList searchTerm={this.props.search}
                      products={this.props.products} />
-        <CartList style={cartListStyles}/>
+        <CartList style={cartListStyles}
+                  products={this.props.products}/>
         
       </div>
     );
